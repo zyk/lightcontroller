@@ -5,3 +5,34 @@
 @import "base/base";
 
 @import "global";
+
+#controls {
+
+	#sliders {
+		display: block;
+		/*width: 100%;*/
+		width: 360px;
+		height: 175px;
+		margin: 0 auto;
+
+		background-color: grey;
+
+		input[type=range][orient=vertical]
+		{
+			float: left;
+			writing-mode: bt-lr; /* IE */
+			-webkit-appearance: slider-vertical; /* WebKit */
+			width: 8px;
+			height: 175px;
+			padding: 0 15px;
+			background-color: white;
+		}
+	}
+
+	#btns {
+		width: 360px;
+		margin: 0 auto;
+		margin-top: 10px;
+		text-align: center;
+	}
+}
