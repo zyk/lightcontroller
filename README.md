@@ -1,3 +1,49 @@
+LightController
+---------------
+
+12 HTML5 input-fields that sends ajax calls on change.
+On load it asks the server for the current values and changes the sliders.
+
+NO DESIGN DONE.
+NO SECURITY WHATSOEVER.
+
+
+Server should have the following API:
+
+# get_lights [GET]:
+
+Return the current values of all the lights.
+JSON format should be:
+
+{
+	"lights": {
+		"1": VALUE,
+		"2": VALUE,
+		"ID": VALUE,
+		...
+	}
+}
+
+Where VALUE is 0-100 (int) and ID (int) is the code for a specific light.
+
+# set_light [GET]:
+
+Set light value for specific light.
+Parameters:
+{ light: ID, value: VALUE }
+where ID is 1-12 and VALUE is 1-100
+
+Or:
+
+{ "all": VALUE }
+
+Turn on/off all lights at the same time.
+
+where VALUE is either "on" or "off"
+
+
+Project is built upon proteus-gulp:
+
 # Proteus - Gulp
 
 ## About Proteus
